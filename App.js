@@ -1,14 +1,26 @@
 import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import { StyleSheet, View } from 'react-native';
+import { Text } from 'react-native-elements';
+import {TextField} from './components/textField';
+import {TestButton} from './components/testButton'
 
 export default function App() {
   return (
 		<>
 			<View style={styles.container1}>
-				<Text>Open up App.js to start working on your app!</Text>
+				<Text h2 style={styles.heading}>Ditch The Signs</Text>
+				<Text h2>Attract a Crowd</Text>
+			</View>
+			<View style={styles.container3}>
+				<TextField
+						placeholder='Email Address'
+						style={styles.input}
+				/>
 			</View>
 			<View style={styles.container2}>
-				<Text>Open up App.js to start working on your app!</Text>
+				<TestButton
+					title='Get Started'
+				/>
 			</View>
 		</>
   );
@@ -16,15 +28,24 @@ export default function App() {
 
 const styles = StyleSheet.create({
 	container1: {
-		flex: 1,
-		backgroundColor: "#fff",
+		flex: 8,
 		alignItems: "center",
 		justifyContent: "center"
 	},
 	container2: {
-		flex: 1,
+		flex: 2,
 		backgroundColor: "#fff",
 		alignItems: "center",
 		justifyContent: "center"
+	},
+	container3: {
+		alignItems: "center",
+		justifyContent: "center"
+	},
+	heading: {
+		color: 'black'
+	},
+	input:{
+		paddingBottom: '3px'
 	}
 });
